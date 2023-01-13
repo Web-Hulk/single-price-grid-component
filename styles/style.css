@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: 'Karla', sans-serif; }
+
+body {
+  color: white;
+  background-color: #e5eff5; }
+  body .main {
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-rows: 1fr min-content min-content min-content 1fr;
+    grid-template-areas: ". . ." ". a ." ". b ." ". c ." ". . .";
+    height: 100vh; }
+    body .main .join-community {
+      grid-area: a;
+      padding: 20px 20px 20px 20px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      background-color: white; }
+      body .main .join-community .title {
+        color: #2ab2af;
+        font-size: 24px; }
+      body .main .join-community .sub-title {
+        color: #c0df34;
+        margin: 16px 0;
+        font-size: 18px;
+        font-weight: 700; }
+      body .main .join-community .description {
+        color: #98a6bd;
+        line-height: 2.0; }
+    body .main .monthly-subscription {
+      grid-area: b;
+      padding: 16px 20px 20px 20px;
+      background-color: #27a5a3; }
+      body .main .monthly-subscription .price-container {
+        margin: 22px 0; }
+        body .main .monthly-subscription .price-container .pricing {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px; }
+          body .main .monthly-subscription .price-container .pricing .price {
+            font-size: 28px;
+            font-weight: 700;
+            margin-right: 8px; }
+          body .main .monthly-subscription .price-container .pricing .per-month {
+            color: #e5eff5; }
+      body .main .monthly-subscription .sign-up-btn {
+        background-color: #c0df34;
+        width: 100%;
+        color: white;
+        height: 50px;
+        border-radius: 8px;
+        border: none;
+        font-weight: 700;
+        font-size: 16px; }
+        body .main .monthly-subscription .sign-up-btn:hover {
+          background-color: #e5eff5;
+          color: #27a5a3; }
+    body .main .why-us {
+      grid-area: c;
+      padding: 18px 20px 20px 20px;
+      background-color: #2ab2af;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px; }
+      body .main .why-us .list {
+        list-style-type: none;
+        margin-top: 16px; }
+        body .main .why-us .list .list-item {
+          color: #e5eff5; }
+        body .main .why-us .list .list-item:not(:last-child) {
+          margin-bottom: 8px; }
+
+@media (min-width: 768px) {
+  body .main {
+    grid-template-columns: 2fr 375px 375px 2fr;
+    grid-template-rows: 1fr min-content min-content 1fr;
+    grid-template-areas: ". . . ." ". a a ." ". b c ." ". . . ."; }
+    body .main .join-community {
+      padding: 40px 40px 40px 40px; }
+    body .main .monthly-subscription {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px 40px 40px 40px;
+      border-bottom-left-radius: 8px; }
+      body .main .monthly-subscription .price-container {
+        margin: 0; }
+    body .main .why-us {
+      padding: 40px 40px 40px 40px;
+      border-bottom-left-radius: 0; } }
